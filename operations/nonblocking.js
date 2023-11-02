@@ -9,3 +9,4 @@ fs.readFile("data/file.txt", (err, data) => {
   else console.log(data);
 });
 moreWork();
+

@@ -48,6 +48,8 @@ The NodeJS standard library has several operations that are called blocking oper
 One must be careful when writing concurrent scripts in Node.js. If actions performed in later stages are related to actions related in previous stages or vice-versa then the program will be in an error state. 
 For example, consider the code in "operations/syncdelete.js".
 
+---moreWork() gets executed in both scripts, but in blocking.js, it runs after the file content is logged, and in nonblocking.js, it runs before the file content is logged or an error message if that occurs.
+
 **For you to do**:
 
 1. Identify and fix the runtime error in "operations/syncdelete.js".
